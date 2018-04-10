@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'HelveticaInseratLT';
+    src:url("fonts/HelveticaInseratLT-Roman.woff");
+    src:url("fonts/HelveticaInseratLT-Roman.woff2");
+    src:url("fonts/HelveticaInseratLT-Roman.ttf");
+}
+@font-face {
+    font-family: 'Tahoma';
+    src:url("fonts/Tahoma.woff");
+    src:url("fonts/Tahoma.woff2");
+    src:url("fonts/Tahoma.ttf");
+}
+@font-face {
+    font-family: 'MyriadPro-BlackCond';
+    src:url("fonts/MyriadPro-BlackCond.woff");
+}
+
+body {
+    font-family: 'Tahoma', 'Verdana', 'Segoe', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color:#ffffff;
+    background: #fff;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.logo {
+    background: #910000;
+    color: #ffffff;
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    top:78px;
+    text-align: center;
+    width:1em;
+    word-wrap: break-word;
+    line-height:23px;
+    font-weight: 400;
+    font-size: 29px;
+    text-decoration: none;
+    font-family: 'MyriadPro-BlackCond','Helvetica', 'Arial', sans-serif;
+
+}
+h1 {
+    font-family: 'HelveticaInseratLT','Helvetica', 'Arial', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 25px;
+}
+
+hr {
+    background-color: #515151;
+    height: 2px;
+    border-color: #666666;
+}
+.container {
+    max-width: 1280px;
+    min-width: 800px;
+    margin: 0 auto;
+}
+/*--------HEADER---------*/
+.header {
+    min-height: 105px;
+    background:#cccccc;
+    color:#ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*Nav menu*/
+.nav-block {
+    display: flex;
+    position: absolute;
+    top:75px;
+
+
+}
+.drop-down {
+    list-style: none;
+    height: 30px;
+    overflow: hidden;
+    background-color: #666666;
+    width: 102px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    line-height: 10px;
+    -webkit-transition: height 0.3s ease;
+    transition: height 0.3s ease;
+    position: relative;
+}
+.drop-down:hover {
+    background-color: #000000;
+}
+
+.inner-li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+.drop-down_inner {
+    position: absolute;
+
+}
+.is-active{
+    display: block;
+    margin-right: 2px;
+    height: 150px;
+    overflow: hidden;
+}
+ .drop-down li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+ .drop-down li:first-child a:after {
+    content: url("images/layer-11.png");
+    transform: rotate(90deg);
+    float: right;
+    margin-left: -30px;
+    margin-right: 5px;
+}
+.logo {
+    padding: 10px 9px 9px 8px;
+}
+/*--------MAIN---------*/
+.main {
+    display:flex;
+    justify-content: space-between;
+    align-items: stretch;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 836px;
+    font-family: 'Tahoma', 'Verdana', 'Segoe', sans-serif;
+}
+.dropdown-link {
+    text-decoration: none;
+}
+.dropdown-link:hover {
+    opacity: .3;
+}
+.dropdown-link:active {
+    opacity: .1;
+}
+
+.left-block_wrapper {
+    width: 70%;
+    background: #cccccc;
+    padding: 10px;
+}
+.right-block_wrapper {
+    width:30%;
+    background: #a3a3a3;
+    padding: 10px;
+}
+
+.left-block,
+.right-block {
+    background: #515151;
+    padding: 24px;
+    height: 100%;
+}
+.right-block {
+    padding: 10px;
+
+}
+.js-content {
+    height: 164px;
+    background: #282828;
+    overflow-y: scroll;
+}
+
+.text-block {
+    text-indent:35px;
+}
+/*---------TABLE---------*/
+table {
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+th, td, tr {border: 1px solid grey;}
+
+
+/*-------ACCORDION-------*/
+
+.accordion-trigger {
+    background: #000000;
+    border: 1px solid #515151;
+    color: #ffffff;
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+}
+.accordion-trigger:after {
+    content: url("images/layer-11.png");
+    position: absolute;
+    right: 10px;
+}
+.accordion-trigger.is-selected {
+    background: #000000;
+}
+.accordion-trigger:before {
+    content: "click to open";
+    display: inline-block;
+    width: 115px;
+}
+.accordion-trigger.is-selected:before {
+    content: "Click to close";
+}
+.accordion-trigger.is-selected:after {
+    content: url("images/layer-11.png");
+    transform: rotate(90deg);
+}
+
+.accordion-panel {
+    max-height: 1000px;
+    opacity: 1;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transition: opacity ease 0.5s, max-height ease 0.75s, -webkit-transform ease 0.5s;
+    transition: opacity ease 0.5s, max-height ease 0.75s, -webkit-transform ease 0.5s;
+    transition: transform ease 0.5s, opacity ease 0.5s, max-height ease 0.75s;
+    transition: transform ease 0.5s, opacity ease 0.5s, max-height ease 0.75s, -webkit-transform ease 0.5s;
+    visibility: visible;
+}
+.accordion-panel.is-hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    visibility: hidden;
+}
+
+.accordion-panel__inner {
+    border: 1px solid #515151;
+    border-top: none;
+    padding: 10px;
+    background: #000000;
+    color:#ffffff
+}
+
+.accordion {
+    /*margin: 0 2% 30px;*/
+    width: 100%;
+}
+
+/*--------FOOTER-------*/
+footer {
+    background: #cccccc;
+    display: flex;
+    justify-content: space-around;
+    height: 43px;
+    font-family: 'Tahoma', 'Verdana', 'Segoe', sans-serif;
+    color:#515151;
+    font-size: 14px;
+    font-weight: 400;
+}
+.copyright {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:50%;
+    padding-left: 19px;
+    line-height: 18px;
+
+}
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width:50%;
+}
+.footer-link {
+    padding-right: 20px;
+    color:#515151;
+    line-height: 18px;
+}
